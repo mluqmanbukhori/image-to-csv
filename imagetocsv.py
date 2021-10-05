@@ -15,7 +15,7 @@ def createFileList(myDir, format='.jpg'):
     return fileList
 
 # load the original image
-myFileList = createFileList('emotion\model')
+myFileList = createFileList('/images')
 
 for file in myFileList:
     print(file)
@@ -34,6 +34,6 @@ for file in myFileList:
     value = np.asarray(img)
     ressu = value.flatten()
     print(ressu)
-    with open("emotion\data.csv", 'a', newline='') as f:
+    with open("/data.csv", 'a', newline='') as f:
         writer = csv.writer(f, delimiter=' ')
         writer.writerow(ressu)
